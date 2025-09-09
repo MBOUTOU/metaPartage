@@ -237,26 +237,41 @@ body.active{
     margin-bottom: 0;
 }
 
+.icone .line .fa-share-nodes{
+font-size: 23px;
+}
+
+.fa-heart{
+  font-size: 23px;
+}
+
 .flottant-block{
     position: fixed;
     left: 0px;
-    top: 500px;
-    height: 250px;
+    top: 450px;
+    height: 300px;
     box-shadow: 0 10px 30px #57575798;
     gap: 20px;
-    padding: 20px 30px;
+    padding: 10px 30px;
     visibility: visible;
     opacity: 1;
-    transform: translateY(250px);
+    transform: translateY(300px);
     transition: transform 0.4s ease;
     width: 360px;
     z-index: 1000;
+    gap: 30px;
 }
 
 .card-links .fa-brands{
-   font-size: 30px;
+   font-size: 40px;
 }
 
+
+.card-links li p{
+   font-size: 10px;
+   font-weight: 500;
+   color: black;
+}
 
 /* LE bas de la page */
 
@@ -294,6 +309,6 @@ body.active{
    pointer-events: auto;
   visibility: visible;
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.603); 
+  background-color: rgba(0, 0, 0, 0.623); 
 }
 }
