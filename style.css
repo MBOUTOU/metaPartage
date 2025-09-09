@@ -260,6 +260,7 @@ font-size: 23px;
     width: 360px;
     z-index: 1000;
     gap: 30px;
+    border-radius: 50px 50px 0 0;
 }
 
 .card-links .fa-brands{
