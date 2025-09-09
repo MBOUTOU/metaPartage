@@ -25,6 +25,8 @@ body{
    max-width: 100%;
    padding: 10px;
    border-radius: 20px;
+   display: flex;
+   flex-direction: column;
    border: 2px solid #3333;
 }
 
@@ -222,6 +224,17 @@ body.active{
    width: 100%;
    padding: 20px 10px;
    border-radius: 20px;
+}
+
+.cardElement{
+   display: flex;
+   flex-direction: column-reverse;
+   border: 2px solid #3333;
+}
+
+.icone-card{
+    padding: 10px 10px 0 10px;
+    margin-bottom: 0;
 }
 
 .flottant-block{
