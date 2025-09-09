@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+ position: relative;
+}
+
+.contenair{
+   height: auto;
+   position: relative;
+   width: 500px;
+   padding: 20px 30px;
+   border-radius: 20px;
+}
+
+.cardElement{
+   max-width: 100%;
+   padding: 10px;
+   border-radius: 20px;
+   border: 2px solid #3333;
+}
+
+.icone-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.icone{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 30px;
+}
+
+.icone .line {
+ height: 50px;
+ width: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ transition: background 0.3s ease;
+}
+
+.icone .line .fa-share-nodes{
+font-size: 20px;
+}
+
+.apparition{
+ height: 50px;
+ width: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: background 0.3s ease;
+ border-radius: 50%;
+ cursor: pointer;
+}
+
+.apparition:hover{
+ background-color: rgba(155, 153, 153, 0.473);
+}
+
+/* le blick flottant */
+.clickparent{
+  position: relative;
+}
+
+.clickparent.active{  
+  background-color: black;
+  color: white;  position: relative;
+}
+
+.flottant-block{
+    position: absolute;
+    left: -20px;
+    width: 435px;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0 10px 30px #57575798;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    top: 50px;
+    gap: 20px;
+    pointer-events: auto;
+    padding: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 0.3s ease,
+    opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.flottant-block.active{
+   transform: translateY(0);
+   opacity: 1;
+   visibility: visible;
+}
+
+.card-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-links li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.card-links li p{
+   font-size: 12px;
+   font-weight: 600;
+   color: black;
+}
+
+.card-links .fa-brands{
+   font-size: 46px;
+}
+
+.fa-facebook{
+  color: #1877F2;
+}
+
+.fa-whatsapp{
+   color: #25D366;
+}
+
+.fa-instagram{
+   color: #E1306C;
+}
+
+.fa-linkedin-in{
+  color: #0077B5;
+}
+
+.copy{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links-copy{
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: rgba(172, 170, 170, 0.397);
+  color: black;
+  border: none;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.login{
+ background-color: rgba(255, 0, 0, 0.678);
+ color: white;
+ padding: 10px 15px;
+ border-radius: 10px;
+ font-family: "Poppins", sans-serif;
+ border: none;
+ font-size: 16px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.contenair img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.section-infotmation{
+   width: 100%;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+.section-infotmation img{
+    width: 320px;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
+@media (max-width: 750px) {
+
+body.active{
+   overflow: hidden;
+}
+
+.contenair{
+   height: auto;
+   position: relative;
+   width: 100%;
+   padding: 20px 10px;
+   border-radius: 20px;
+}
+
+.flottant-block{
+    position: fixed;
+    left: 0px;
+    top: 500px;
+    height: 250px;
+    box-shadow: 0 10px 30px #57575798;
+    gap: 20px;
+    padding: 20px 30px;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(250px);
+    transition: transform 0.4s ease;
+    width: 360px;
+    z-index: 1000;
+}
+
+.card-links .fa-brands{
+   font-size: 30px;
+}
+
+
+/* LE bas de la page */
+
+.section-infotmation{
+   width: 100%;
+   padding: 20px;
+   display: flex;
+   gap: 10px;
+}
+
+.section-infotmation img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+.id-black{
+   width: 100%;
+   z-index: 100;
+   height: 100%; 
+   position: absolute; 
+   top: 0;
+   left: 0;
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0.4s ease,
+   opacity 0.3s ease;
+   pointer-events: none;
+}
+
+.id-black.active{
+   pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.603); 
+}
+}
