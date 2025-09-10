@@ -36,15 +36,15 @@ document.addEventListener("DOMContentLoaded", () =>{
   
 
   function partagerSurFacebook() {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${EncodeUrlPage}`, '_blank', 'noopener,noreferrer');
   };
 
   function partagerSurWhatsApp() {
-    window.open(`https://api.whatsapp.com/send?text=${Produittitle}%20${encodedUrl}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://api.whatsapp.com/send?text=${MessageProduit}%20${EncodeUrlPage}`, '_blank', 'noopener,noreferrer');
   };
 
   function partagerSurLinkedIn() {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${EncodeUrlPage}`, '_blank', 'noopener,noreferrer');
   };
 
   function ouvrirInstagram() {
