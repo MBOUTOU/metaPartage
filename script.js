@@ -1,7 +1,8 @@
 const ClickparentButton = document.querySelector(".clickparent");
 const BlockLinks = document.querySelector(".flottant-block");
 const BlackElement = document.querySelector(".id-black");
-const BodyStyle = document.querySelector("body")
+const BodyStyle = document.querySelector("body");
+
 ClickparentButton.addEventListener('click', (e) => {
   e.stopPropagation();
   BlockLinks.classList.toggle("active");
@@ -20,3 +21,60 @@ document.addEventListener("click", () => {
   BlackElement.classList.remove("active");
   BodyStyle.classList.remove("active")
 });
+
+
+
+// la partie des elements de partage 
+document.addEventListener("DOMContentLoaded", () =>{
+  let URldelapage = window.location.href;
+
+  if(URldelapage.includes("localhost")){
+    URldelapage = "https://github.com/MBOUTOU/metaPartage";
+  }
+  const EncodeUrlPage = encodeURIComponent(URldelapage);
+  const MessageProduit = encodeURIComponent("Découvrer cette belle affiche de qualité");
+  
+
+  function partagerSurFacebook() {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, '_blank', 'noopener,noreferrer');
+  };
+
+  function partagerSurWhatsApp() {
+    window.open(`https://api.whatsapp.com/send?text=${Produittitle}%20${encodedUrl}`, '_blank', 'noopener,noreferrer');
+  };
+
+  function partagerSurLinkedIn() {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank', 'noopener,noreferrer');
+  };
+
+  function ouvrirInstagram() {
+    window.open(`https://www.instagram.com/ton_nom_d_utilisateur/`, '_blank', 'noopener,noreferrer');
+  };
+
+const btnFacebook = document.querySelector(".sharFacebook");
+const btnInstagram = document.querySelector(".sharInsta");
+const btnLinkedIn = document.querySelector(".sharLinkdin");
+const btnWhatsApp = document.querySelector(".sharWhatsapp")
+
+if(btnFacebook){
+  btnFacebook.addEventListener('click', partagerSurFacebook)
+}
+
+if(btnWhatsApp){
+  btnWhatsApp.addEventListener('click', partagerSurWhatsApp);
+}
+
+if(btnInstagram){
+  btnInstagram.addEventListener("clicl", ouvrirInstagram)
+};
+
+if(btnLinkedIn){
+  btnLinkedIn.addEventListener("click", partagerSurLinkedIn)
+}
+})
+
+
+
+
+
+
